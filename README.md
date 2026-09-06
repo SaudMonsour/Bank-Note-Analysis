@@ -1,6 +1,6 @@
 # Banknote authentication from image statistics
 
-**2026-09-05 · CLASSIFICATION · Automatically executed · Human review pending**
+**2026-09-05 · CLASSIFICATION · **
 
 ## Research question
 
@@ -113,7 +113,3 @@ python daily_ds/reproduce.py projects/2026-09-05-banknote
 ```
 
 The command uses the saved snapshot, configuration and dataset specification, and writes to reproduced/. analysis.ipynb provides a readable walkthrough. Numeric results may differ slightly across platforms; software versions and code hashes are recorded.
-
-## Your contribution
-
-This study was generated and executed by an automated agent. It has not been reviewed by Saud. Use LEARNING_NOTES.md to record your own explanation, changed code, new experiment and measured outcome; leave unanswered fields blank.
