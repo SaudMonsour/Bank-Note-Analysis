@@ -1,53 +1,50 @@
 # Banknote Authentication Analysis
 
-**Binary Classification · Machine Learning Benchmark**
-
-Supervised learning analysis to authenticate genuine vs. forged banknotes using statistical continuous wavelet transform features.
+Binary classification benchmark authenticating genuine vs. forged banknotes using continuous wavelet transform features.
 
 ---
 
 ## Overview
 
-* **Objective:** Classify banknote authenticity based on wavelet transform variance, skewness, kurtosis, and entropy.
-* **Dataset:** 1,372 records, 4 continuous features.
-* **Evaluation:** Stratified train/test holdout evaluated against baseline classifiers.
-* **Key Artifacts:** Preprocessing pipeline, cross-validation metrics, and permutation importance.
+* **Task:** Supervised binary classification on the UCI Banknote Authentication dataset.
+* **Dataset:** 1,372 records, 4 continuous numerical features, zero missing cells.
+* **Evaluation:** Stratified cross-validation and holdout evaluation against baseline models.
+* **Target:** Authentic (0) vs. Forged (1).
 
 ---
 
 ## Data Summary
 
-* **Source:** UCI Machine Learning Repository (Banknote Authentication)
+* **Source:** [UCI Machine Learning Repository — Banknote Authentication](https://archive.ics.uci.edu/dataset/267/banknote+authentication)
 * **Features:**
   * `variance`: Variance of Wavelet Transformed image
   * `skewness`: Skewness of Wavelet Transformed image
   * `curtosis`: Curtosis of Wavelet Transformed image
   * `entropy`: Entropy of image
-* **Class Balance:** Binary distribution (Genuine vs. Forged) with zero missing entries.
+* **Quality Check:** 1,372 total records, 0 missing values, zero duplicates removed.
 
 ---
 
 ## Visualizations
 
-| Target & Distributions | Correlation Matrix |
+| Data Quality & Target | Feature Distributions |
 | :---: | :---: |
-| ![Distributions](figures/distributions.png) | ![Correlations](figures/correlations.png) |
+| ![Data Quality](figures/data-quality.png) | ![Distributions](figures/distributions.png) |
 
-| Model Performance | Error / Diagnostics |
+| Feature Correlations | Model Comparison |
 | :---: | :---: |
-| ![Model Comparison](figures/model-comparison.png) | ![Error Analysis](figures/error-analysis.png) |
+| ![Correlations](figures/correlations.png) | ![Model Comparison](figures/model-comparison.png) |
 
 ---
 
 ## Repository Structure
 
 ```text
-├── figures/                   # Distribution, correlation, and model plots
-├── analysis.ipynb             # End-to-end interactive exploration notebook
-├── audit.json                 # Pipeline metadata and reproducibility hash
-├── data_dictionary.csv        # Column specifications and descriptive ranges
-├── descriptive_statistics.csv # Summary statistics for each predictor
-├── error_analysis.csv         # Holdout predictions and misclassification logs
-├── feature_importance.csv     # Model-level permutation importance
-├── metrics.json               # Full evaluation scores
+├── figures/                   # Diagnostic, distribution, and evaluation plots
+├── analysis.ipynb             # Interactive walk-through and evaluation notebook
+├── audit.json                 # Run hashes and reproducible environment metadata
+├── data_dictionary.csv        # Feature types, boundaries, and descriptions
+├── descriptive_statistics.csv # Summary distribution stats per feature
+├── feature_importance.csv     # Permutation importance rankings
+├── metrics.json               # Full CV and holdout validation scores
 └── README.md
