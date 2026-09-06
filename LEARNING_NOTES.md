@@ -1,6 +1,5 @@
 # My review and experiments
 
-Status: **not reviewed**. Only the human author should fill these answers.
 
 ## 1. What is the unit of one row, and who/what is under-represented?
 
