@@ -1,0 +1,16 @@
+{
+  "original_rows": 1372,
+  "original_features": 4,
+  "missing_cells": 0,
+  "missing_by_column": {
+    "variance": 0,
+    "skewness": 0,
+    "curtosis": 0,
+    "entropy": 0,
+    "class": 0
+  },
+  "missing_target_rows_removed": 0,
+  "excluded_columns": [],
+  "exact_duplicates_removed": 24,
+  "usable_rows": 1348
+}

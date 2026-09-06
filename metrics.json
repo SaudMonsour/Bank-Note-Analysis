@@ -1,0 +1,142 @@
+{
+  "task": "classification",
+  "primary_metric": "macro_f1",
+  "higher_is_better": true,
+  "selected_model": "Logistic regression",
+  "leaderboard": [
+    {
+      "model": "Logistic regression",
+      "cv_mean": 0.9925245234306916,
+      "cv_std": 0.004760466680656259,
+      "fold_scores": [
+        0.9944001991040319,
+        0.9971861895990908,
+        0.9859871815889522
+      ],
+      "selection_score": 0.9925245234306916
+    },
+    {
+      "model": "Random forest",
+      "cv_mean": 0.9887835591580988,
+      "cv_std": 0.0022662741442373343,
+      "fold_scores": [
+        0.986007353912888,
+        0.9915585687972723,
+        0.9887847547641362
+      ],
+      "selection_score": 0.9887835591580988
+    },
+    {
+      "model": "Dummy baseline",
+      "cv_mean": 0.35371671026515195,
+      "cv_std": 0.0004756457491141044,
+      "fold_scores": [
+        0.35368043087971274,
+        0.35431654676258995,
+        0.35315315315315315
+      ],
+      "selection_score": 0.35371671026515195
+    }
+  ],
+  "test_metrics": {
+    "Logistic regression": {
+      "accuracy": 0.9851851851851852,
+      "macro_f1": 0.9850861688024746,
+      "balanced_accuracy": 0.9864864864864865,
+      "roc_auc": 1.0
+    },
+    "Dummy baseline": {
+      "accuracy": 0.5481481481481482,
+      "macro_f1": 0.35406698564593303,
+      "balanced_accuracy": 0.5,
+      "roc_auc": 0.5
+    }
+  },
+  "confidence_interval": {
+    "low": 0.9702380952380952,
+    "high": 0.9963576617087513,
+    "repeats": 200,
+    "method": "Percentile bootstrap on fixed-model holdout predictions; stratified by class for classification",
+    "limitation": "Conditional on this fitted model and split; excludes training/model-selection uncertainty"
+  },
+  "train_metrics": {
+    "accuracy": 0.9944341372912802,
+    "macro_f1": 0.9943877551020408,
+    "balanced_accuracy": 0.9947381217004724
+  },
+  "train_rows": 1078,
+  "test_rows": 270,
+  "selection_used_test": false,
+  "warnings": [],
+  "parameters": {
+    "Dummy baseline": {
+      "constant": null,
+      "random_state": null,
+      "strategy": "most_frequent"
+    },
+    "Logistic regression": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 1500,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "Random forest": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 14,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "per_class": {
+    "0": {
+      "precision": 1.0,
+      "recall": 0.972972972972973,
+      "f1-score": 0.9863013698630136,
+      "support": 148.0
+    },
+    "1": {
+      "precision": 0.9682539682539683,
+      "recall": 1.0,
+      "f1-score": 0.9838709677419355,
+      "support": 122.0
+    },
+    "accuracy": 0.9851851851851852,
+    "macro avg": {
+      "precision": 0.9841269841269842,
+      "recall": 0.9864864864864865,
+      "f1-score": 0.9850861688024746,
+      "support": 270.0
+    },
+    "weighted avg": {
+      "precision": 0.9856554967666078,
+      "recall": 0.9851851851851852,
+      "f1-score": 0.98520318816386,
+      "support": 270.0
+    }
+  }
+}

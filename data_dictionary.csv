@@ -1,0 +1,6 @@
+column,dtype,missing,unique,role
+variance,float64,0,1338,feature
+skewness,float64,0,1256,feature
+curtosis,float64,0,1270,feature
+entropy,float64,0,1156,feature
+class,int64,0,2,target
